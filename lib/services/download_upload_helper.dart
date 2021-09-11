@@ -15,9 +15,9 @@ class DownloadUploadHelper {
   final GlobalKey<ScaffoldState> scaffoldKey;
   PublishSubject<double> eventObservable;
   PublishSubject<bool> eventSpeedTestCompletion;
-  StreamSubscription<StorageTaskEvent> uploadStreamSubscription;
+  StreamSubscription<dynamic> uploadStreamSubscription;
   StreamSubscription<bool> subscriptionEventSpeedTestCompletion;
-  StorageUploadTask uploadTask;
+  var uploadTask;
   String appPath;
   var length;
 
@@ -68,8 +68,7 @@ class DownloadUploadHelper {
     var received = 0;
     var currentDownloadSpeed = 0.0;
 
-    StorageReference storageRef =
-        storage.ref().child('Images').child("Image1.png");
+    Reference storageRef = storage.ref().child('Images').child("Image1.png");
     final String url = await storageRef.getDownloadURL();
     print('Download Url: $url.');
     //var response = await http.get(url);
@@ -134,12 +133,11 @@ class DownloadUploadHelper {
     appPath = await appDir.then((value) => value.path);
     final file = await File('$appPath/Image1.png').create();
     var length = await file.length();
-    final StorageReference ref =
-        storage.ref().child('Images').child('$uuid.png');
+    Reference ref = storage.ref().child('Images').child('$uuid.png');
 
     uploadTask = ref.putData(
       file.readAsBytesSync(),
-      StorageMetadata(
+      SettableMetadata(
         contentLanguage: 'en',
         customMetadata: <String, String>{'activity': 'test'},
       ),
