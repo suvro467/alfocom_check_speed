@@ -32,8 +32,8 @@ void main() async {
   } catch (error) {
     print('App is already registered, ignoring the exception.');
   }
-  FirebaseStorage storage = FirebaseStorage(
-      app: app, storageBucket: 'gs://check-speed-firebase-project.appspot.com');
+  FirebaseStorage storage = FirebaseStorage.instanceFor(
+      app: app, bucket: 'gs://check-speed-firebase-project.appspot.com');
   runApp(MyApp(storage: storage, appPath: appPath));
 }
 
