@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "43629338758",
+    "firebase_url": "https://check-speed-firebase-project.firebaseio.com",
+    "project_id": "check-speed-firebase-project",
+    "storage_bucket": "check-speed-firebase-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43629338758:android:c5111e1c5b0d8a71907107",
+        "android_client_info": {
+          "package_name": "in.alfocom.alfocom_check_speed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43629338758-eor51km13t6u0u5mg9u5lvftmdsjpfcp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzMYd-4Als79zM7kOZ5ygxB4qlaPEvqDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43629338758-eor51km13t6u0u5mg9u5lvftmdsjpfcp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
