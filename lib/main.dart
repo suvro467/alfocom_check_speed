@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
+import 'injection_container.dart' as di;
 
 import 'package:alfocom_check_speed/screens/home.dart';
 
@@ -34,6 +35,9 @@ void main() async {
   }
   FirebaseStorage storage = FirebaseStorage.instanceFor(
       app: app, bucket: 'gs://check-speed-firebase-project.appspot.com');
+
+  di.setUp();
+
   runApp(MyApp(storage: storage, appPath: appPath));
 }
 
