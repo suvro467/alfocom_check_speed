@@ -4,19 +4,16 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:date_time_format/date_time_format.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key, this.storage, this.appPath}) : super(key: key);
-  final FirebaseStorage storage;
-  final String appPath;
+  HomePage({
+    Key key,
+  }) : super(key: key);
 
   @override
-  _HomePageState createState() =>
-      _HomePageState(storage: this.storage, appPath: this.appPath);
+  _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  final FirebaseStorage storage;
-  final String appPath;
-  _HomePageState({this.storage, this.appPath});
+  _HomePageState();
 
   AnimationController _controller;
   Animation<double> _animation;

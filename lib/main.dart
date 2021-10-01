@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => DefaultTabController(
               length: 2,
-              child: HomePage(storage: storage, appPath: appPath),
+              child: HomePage(),
             ), // HomePage(storage: storage, appPath: appPath),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/speedtest': (context) => SpeedTest(
