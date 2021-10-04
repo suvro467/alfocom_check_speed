@@ -11,7 +11,7 @@ import 'package:alfocom_check_speed/screens/home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final appPath =
+  /* final appPath =
       await getApplicationDocumentsDirectory().then((value) => value.path);
   final FirebaseOptions firebaseOptions = (Platform.isIOS || Platform.isMacOS)
       ? const FirebaseOptions(
@@ -34,17 +34,17 @@ void main() async {
     print('App is already registered, ignoring the exception.');
   }
   FirebaseStorage storage = FirebaseStorage.instanceFor(
-      app: app, bucket: 'gs://check-speed-firebase-project.appspot.com');
+      app: app, bucket: 'gs://check-speed-firebase-project.appspot.com'); */
 
   di.setUp();
 
-  runApp(MyApp(storage: storage, appPath: appPath));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({this.storage, this.appPath});
+  /* MyApp({this.storage, this.appPath});
   final FirebaseStorage storage;
-  final String appPath;
+  final String appPath; */
 
   @override
   Widget build(BuildContext context) {
@@ -60,8 +60,8 @@ class MyApp extends StatelessWidget {
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/speedtest': (context) => SpeedTest(
               title: 'Check Speed',
-              storage: storage,
-              appPath: appPath,
+              /* storage: storage,
+              appPath: appPath, */
             ),
       },
       title: 'Check Speed',
