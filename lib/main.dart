@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
+import 'injection_container.dart' as di;
 
 import 'package:alfocom_check_speed/screens/home.dart';
 
@@ -34,6 +35,9 @@ void main() async {
   }
   FirebaseStorage storage = FirebaseStorage.instanceFor(
       app: app, bucket: 'gs://check-speed-firebase-project.appspot.com');
+
+  di.setUp();
+
   runApp(MyApp(storage: storage, appPath: appPath));
 }
 
@@ -51,7 +55,7 @@ class MyApp extends StatelessWidget {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => DefaultTabController(
               length: 2,
-              child: HomePage(storage: storage, appPath: appPath),
+              child: HomePage(),
             ), // HomePage(storage: storage, appPath: appPath),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/speedtest': (context) => SpeedTest(
