@@ -1,1 +1,1 @@
-class StringConstants {}
+const String kCheckSpeedTitle = 'Check Speed';

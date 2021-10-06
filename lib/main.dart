@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:alfocom_check_speed/core/utils/string_constants.dart';
 import 'package:alfocom_check_speed/presentation/views/home.dart';
 import 'package:alfocom_check_speed/presentation/views/speedtest.dart';
 import 'package:flutter/material.dart';
@@ -55,12 +56,12 @@ class MyApp extends StatelessWidget {
             ), // HomePage(storage: storage, appPath: appPath),
         // When navigating to the "/second" route, build the SecondScreen widget.
         '/speedtest': (context) => SpeedTest(
-              title: 'Check Speed',
+              title: kCheckSpeedTitle,
               /* storage: storage,
               appPath: appPath, */
             ),
       },
-      title: 'Check Speed',
+      title: kCheckSpeedTitle,
       //home: HomePage(storage: storage, appPath: appPath),
     );
   }
