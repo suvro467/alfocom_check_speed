@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:alfocom_check_speed/shared/checkspeedmeter.dart';
+import 'package:alfocom_check_speed/presentation/widgets/checkspeedmeter.dart';
+import 'package:alfocom_check_speed/presentation/widgets/shared_container.dart';
 import 'package:alfocom_check_speed/services/download_upload_helper.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:alfocom_check_speed/shared/shared_container.dart';
 
 class SpeedTest extends StatefulWidget {
   final String title;

@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:alfocom_check_speed/presentation/widgets/handpainter.dart';
+import 'package:alfocom_check_speed/presentation/widgets/linepainter.dart';
+import 'package:alfocom_check_speed/presentation/widgets/speedtextpainter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:alfocom_check_speed/shared/handpainter.dart';
-import 'package:alfocom_check_speed/shared/linepainter.dart';
-import 'package:alfocom_check_speed/shared/speedtextpainter.dart';
 import 'package:rxdart/rxdart.dart';
 
 class CheckSpeedMeter extends StatefulWidget {
