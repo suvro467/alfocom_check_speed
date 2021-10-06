@@ -1,13 +1,9 @@
 import 'dart:io';
 
-import 'package:alfocom_check_speed/screens/speedtest.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+import 'package:alfocom_check_speed/presentation/views/home.dart';
+import 'package:alfocom_check_speed/presentation/views/speedtest.dart';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
-import 'injection_container.dart' as di;
-
-import 'package:alfocom_check_speed/screens/home.dart';
+import 'package:alfocom_check_speed/injector.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

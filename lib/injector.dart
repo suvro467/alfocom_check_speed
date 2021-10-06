@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:alfocom_check_speed/feature/check_speed/data/datasource/firebase_data_source.dart';
+import 'package:alfocom_check_speed/data/datasource/remote/firebase_data_source.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get_it/get_it.dart';
